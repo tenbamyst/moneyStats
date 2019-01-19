@@ -1,23 +1,21 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { FileChooser } from '@ionic-native/file-chooser';
+import { FileConverterProvider } from '../../providers/file-converter.provider';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+	selector: 'page-home',
+	templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor(
-    public navCtrl: NavController,
-    public fileChooser: FileChooser
-  ) {
+	constructor (
+		public navCtrl: NavController,
+		private fileConverter: FileConverterProvider
+	) {
 
-  }
+	}
 
-  openPicker(): void {
-    this.fileChooser.open().then(value => {
-      console.log(value);
-    });
-  }
+	openPicker (): void {
+		this.fileConverter.browseFile();
+	}
 }

@@ -1,8 +1,6 @@
 {
-  "name": "MoneuStats",
+  "name": "MoneyStats",
   "app_id": "",
   "type": "ionic-angular",
-  "integrations": {
-    "cordova": {}
-  }
+  "integrations": {}
 }
